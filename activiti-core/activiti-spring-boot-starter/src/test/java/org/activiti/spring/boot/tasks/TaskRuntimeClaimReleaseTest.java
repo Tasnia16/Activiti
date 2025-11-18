@@ -121,6 +121,12 @@ public class TaskRuntimeClaimReleaseTest {
                 .build()
         );
 
+        // ←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←←
+        System.out.println(">>> REAL DYNAMIC TRACE START - OD TEST <<<");
+        new Throwable("CALL STACK:").printStackTrace();
+        System.out.println(">>> REAL DYNAMIC TRACE END - OD TEST <<<");
+        System.out.println();
+
         assertThat(standAloneTask.getAssignee()).isNull();
         assertThat(standAloneTask.getStatus()).isEqualTo(Task.TaskStatus.CREATED);
 
